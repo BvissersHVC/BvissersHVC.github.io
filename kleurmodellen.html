@@ -5,6 +5,38 @@
     <title>Kleurmodellen</title>
     <meta charset="utf-8">
   </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achtergrondkleurverandering</title>
+  <style>
+      body {
+          /* Stel een initiële achtergrondkleur in */
+          background-color: rgb(255, 0, 0); /* Rood */
+          transition: background-color 2s; /* Voeg een overgangseffect toe */
+      }
+  </style>
+</head>
+<body>
+  <h1>Welkom op mijn website</h1>
+  <p>Dit is een voorbeeld van een achtergrondkleurverandering.</p>
+
+  <script>
+      // JavaScript om de achtergrondkleur te veranderen
+      const colors = [
+          "rgb(255, 0, 0)",   // Rood
+          "rgb(0, 255, 0)",   // Groen
+          "rgb(0, 0, 255)"    // Blauw
+      ];
+      let currentIndex = 0;
+
+      function changeBackgroundColor() {
+          document.body.style.backgroundColor = colors[currentIndex];
+          currentIndex = (currentIndex + 1) % colors.length;
+      }
+
+      // Verander de achtergrondkleur elke 2 seconden
+      setInterval(changeBackgroundColor, 2000);
+  </script>
   <body>
     Links
     <ul>
