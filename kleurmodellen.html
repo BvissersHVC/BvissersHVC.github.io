@@ -55,6 +55,55 @@
     background-color: #111;
   }
 </style>
+<style>
+  /* Standaard verberg het menu met CSS */
+  #menu {
+    display: none;
+  }
+
+  /* Stijlen voor de knop om het menu te openen/sluiten */
+  #menu-button {
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  /* Stijlen voor de menu-items */
+  #menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #menu li {
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+<!-- Knop om het menu te openen/sluiten -->
+<div id="menu-button" onclick="toggleMenu()">☰ Menu</div>
+
+<!-- Het uitklapbare menu met links -->
+<div id="menu">
+  <ul>
+    <li><a href="index.html">Hoofdmenu</a></li>
+    <li><a href="kleurmodellen.html">kleurmodellen</a></li>
+    <li><a href="binairestelsel.html">binairestelsel</a></li>
+    <li><a href="Compressietechnieken.html">compressietechnieken</a></li>
+    <li><a href="Werking van de PC.html">werking van de PC</a></li>
+    <li><a href="Over mij.html">Over mij</a></li>
+  </ul>
+</div>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+</script>
   <script>
       // JavaScript om de achtergrondkleur te veranderen
       const colors = [
