@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Standaard verberg het menu met CSS */
+    #menu {
+      display: none;
+    }
+
+    /* Stijlen voor de knop om het menu te openen/sluiten */
+    #menu-button {
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /* Stijlen voor de menu-items */
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #menu li {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Knop om het menu te openen/sluiten -->
+  <div id="menu-button" onclick="toggleMenu()">☰ Menu</div>
+  
+  <!-- Het uitklapbare menu met links -->
+  <div id="menu">
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+      <li><a href="#">Link 6</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
