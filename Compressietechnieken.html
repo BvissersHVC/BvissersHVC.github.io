@@ -2,71 +2,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  /* Standaardstijl van het zijmenu */
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-
-  /* Stijl voor de zijmenu-links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  /* Stijl voor de zijmenu-links bij hover */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-
-  /* Stijl voor het knopje om het zijmenu te openen */
-  #openNav {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    font-size: 30px;
-    cursor: pointer;
-  }
-</style>
-</head>
-<body>
-
-<!-- Knop om het zijmenu te openen -->
-<span id="openNav" onclick="openNav()">&#9776;</span>
-
-<!-- Het zijmenu -->
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  <a href="#">Link 4</a>
-  <a href="#">Link 5</a>
-  <a href="#">Link 6</a>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+    <style>
+        /* Standaard verberg het menu met CSS */
+        #menu {
+          display: none;
+        }
+      
+        /* Stijlen voor de knop om het menu te openen/sluiten */
+        #menu-button {
+          cursor: pointer;
+          font-size: 20px;
+        }
+      
+        /* Stijlen voor de menu-items */
+        #menu ul {
+          list-style-type: none;
+          padding: 0;
+        }
+      
+        #menu li {
+          margin: 10px 0;
+        }
+      </style>
+      </head>
+      <body>
+      <!-- Knop om het menu te openen/sluiten -->
+      <div id="menu-button" onclick="toggleMenu()">☰ Menu</div>
+      
+      <!-- Het uitklapbare menu met links -->
+      <div id="menu">
+        <ul>
+          <li><a href="index.html">Hoofdmenu</a></li>
+          <li><a href="kleurmodellen.html">kleurmodellen</a></li>
+          <li><a href="binairestelsel.html">binairestelsel</a></li>
+          <li><a href="Compressietechnieken.html">compressietechnieken</a></li>
+          <li><a href="Werking van de PC.html">werking van de PC</a></li>
+          <li><a href="Over mij.html">Over mij</a></li>
+        </ul>
+      </div>
+      
+      <script>
+        function toggleMenu() {
+          var menu = document.getElementById("menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          } else {
+            menu.style.display = "block";
+          }
+        }
+      </script>
 
 </body>
 </html>
